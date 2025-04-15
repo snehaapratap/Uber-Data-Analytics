@@ -26,5 +26,5 @@ def export_data_to_big_query(data, **kwargs) -> None:
         BigQuery.with_config(ConfigFileLoader(config_path, config_profile)).export(
             DataFrame(value),
             table_id,
-            if_exists='replace',  # Specify resolution policy if table name already exists
+            if_exists='replace', 
         )
